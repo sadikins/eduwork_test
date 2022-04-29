@@ -212,6 +212,36 @@ maka akan menghasilkan ouput [4,7,9,12]</p>
 
     echo $hasil;
     ?>
+        
+        ================================================================
+        Lewat tanggal test
+        ================================================================
+      #10. Buatlah fungsi untuk mengecek tahun kabisat
+            input : 2021
+            output : 2021 bukan tahun kabisat
+
+            input : 2024
+            output : 2024 adalah tahun kabisat
+        
+         <form method="post" action=""> 
+    Masukkan tahun <input type="text" name="bil" /><br />
+    <input type="submit" name="submit" value="Submit" /> 
+    </form> 
+
+        <?php
+        if(isset($_POST['submit'])){
+        $TAHUN = $_POST['bil'];
+        if ($TAHUN%4==0)
+        {
+            echo "$TAHUN TAHUN KABISAT"; 
+        }
+        else if($TAHUN%4!=0)
+        {
+            echo "$TAHUN BUKAN TAHUN KABISAT"; 
+        }
+        }
+        ?>
+
 
 
     </body>
