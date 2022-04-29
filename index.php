@@ -216,6 +216,58 @@ maka akan menghasilkan ouput [4,7,9,12]</p>
         ================================================================
         Lewat tanggal test
         ================================================================
+      #9. Buatlah fungsi untuk menentukan bilangan terkecil dan terbesar dari sebuah array
+            Contoh : array [4,2,6,88,3,11]
+            Maka outputnya adalah low : 2, high : 88
+            dilarang menggunakan built in function
+        
+         <h4>Mencari Nilai Max dan Min</h4>
+    <?php 
+      $nilaiArray = [1,4,7,9,12];
+      for($i = 1; $i <= count($nilaiArray); $i++){
+          // untuk hasil sisa bagi 2
+          if($i % 2 === 0) { 
+              echo ' '.$i ;
+              //untuk push nilai ke array kosong
+              array_push($nilaiArray, $i);  
+          }
+      };
+      echo "<br>";
+      $nilMax = 0;
+      $nilMin = 99999;
+
+      // melakukan perulangan pada array menggunakan foreach
+      foreach ($nilaiArray as $nilArr) {
+        if($nilArr > $nilMax) {
+            $nilMax = $nilArr;
+        }
+
+        if($nilArr < $nilMin) {
+            $nilMin = $nilArr;
+        }
+    }
+
+    echo 'nilai terbesar adalah '.$nilMax;
+    echo "<br>";
+    echo 'nilai terkecil adalah '.$nilMin;
+
+    $hasil=0;
+    for ($i=0; $i < $nilaiArray; $i++) { 
+        
+        if($nilaiArray == $nilMax || $nilaiArray == $nilMin)
+        {
+            return;
+        }else{
+            return $hasil= $hasil + $nilaiArray[$i];
+        }
+
+    }
+
+
+    echo $hasil;
+    ?>
+        
+
       #10. Buatlah fungsi untuk mengecek tahun kabisat
             input : 2021
             output : 2021 bukan tahun kabisat
