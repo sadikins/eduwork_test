@@ -216,6 +216,40 @@ maka akan menghasilkan ouput [4,7,9,12]</p>
         ================================================================
         Lewat tanggal test
         ================================================================
+        
+      #8.
+        Apabila terdapat int = 15, maka akan mencetak output berikut :
+        1
+        2
+        Edu
+        4
+        Work
+        6
+        7
+        8
+        Edu
+        10
+        11
+        Edu
+        13
+        14
+        EduWork
+
+        keterangan : string edu untuk kelipatan 3, string work untuk kelipatan 5, string eduwork untuk kelipatan 3 dan 5
+
+        function eduwork($angka)
+        {
+            // Jika angka kelipatan 3, tampilkan Fizz
+            if ($angka % 3 == 0) {
+                echo "Edu\n";
+            // Jika angka kelipatan 5, tampilkan Buzz
+            } elseif ($angka % 5 == 0) {
+                echo "Work\n";
+            // Jika bukan kelipatan 3 atau 5, tampilkan angka sebenarnya
+            } else {
+                echo $angka . "\n";
+            }
+        }
       #9. Buatlah fungsi untuk menentukan bilangan terkecil dan terbesar dari sebuah array
             Contoh : array [4,2,6,88,3,11]
             Maka outputnya adalah low : 2, high : 88
