@@ -105,21 +105,22 @@ Hasil :
 Contoh : let a = 3, let b = 7 => hasilnya a = 7, b = 3
 </p>
 
-<?php
-    $a = 3;
-    $b = 7;
-
-    echo 'variabel A adalah '. $a . '</br>';
-    echo 'variabel B adalah '. $b . '</br>';
+<?php      
+        // Koreksi
+        echo $a=3;
+        echo $b=7;
+            
+        //Proses swap
+        $a=$a + $b;
+        $b=$a-$b;
+        $a= $a+$b;
+        
+        //setelah swap
+        echo $a;
+        echo $b;
+        
+        
     
-    $c = $a;
-    $a = $b;
-    $b = $c;
-
-    echo '</br>';
-
-    echo 'Variabel A setelah di swap '. $a . '</br>' ; 
-    echo 'Variabel B setelah di swap '. $b;
 ?>
 
 <p>
