@@ -88,16 +88,44 @@ Hasil :
 1
  </p>
 
-<?php
-  $kalimat = "9.86-A5.321";
-   preg_match_all('!\d+!', $kalimat, $matches);
-  
-  $angka = print_r($matches, true);
+<script>
+    let inputString = "9.86-A5.321";
+
+let reg = /\d+/g;
+
+let rowNum = inputString.match(reg);
+
+var num = [];
+
+for(var i = 0; i < rowNum.length; i++)
+{
+    
+    num += rowNum[i];
+}
+
+// console.log(num);
 
 
-  
- 
- ?>
+const placeValue = (num, res = [], factor = 1) => {
+
+   
+    if(num){
+      
+    const val = (num % 10) * factor;
+    
+    res.unshift(val);
+
+      return placeValue(Math.floor(num / 10), res, factor * 10);
+   };
+
+   return res;
+
+
+};
+
+console.log(placeValue(num));
+        
+</script>
 
 
 <p>
