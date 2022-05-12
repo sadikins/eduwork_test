@@ -346,10 +346,10 @@ maka akan menghasilkan output = 4
         <?php
         function eduwork($angka)
         {
-            // Jika angka kelipatan 3, tampilkan Fizz
+            // Jika angka kelipatan 3, tampilkan Edu
             if ($angka % 3 == 0) {
                 echo "Edu\n";
-            // Jika angka kelipatan 5, tampilkan Buzz
+            // Jika angka kelipatan 5, tampilkan Work
             } elseif ($angka % 5 == 0) {
                 echo "Work\n";
             // Jika bukan kelipatan 3 atau 5, tampilkan angka sebenarnya
