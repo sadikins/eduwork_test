@@ -343,7 +343,7 @@ maka akan menghasilkan output = 4
         EduWork
 
         keterangan : string edu untuk kelipatan 3, string work untuk kelipatan 5, string eduwork untuk kelipatan 3 dan 5
-
+        <?php
         function eduwork($angka)
         {
             // Jika angka kelipatan 3, tampilkan Fizz
@@ -357,6 +357,7 @@ maka akan menghasilkan output = 4
                 echo $angka . "\n";
             }
         }
+        ?>
       #9. Buatlah fungsi untuk menentukan bilangan terkecil dan terbesar dari sebuah array
             Contoh : array [4,2,6,88,3,11]
             Maka outputnya adalah low : 2, high : 88
