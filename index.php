@@ -132,24 +132,63 @@ console.log(placeValue(num));
     #4. Ketik kode untuk swap 2 integer variables tanpa VARIABLE TAMBAHAN 
 Contoh : let a = 3, let b = 7 => hasilnya a = 7, b = 3
 </p>
+<script>
+var data = [1,4,7,9,12,14];
 
-<?php      
-        // Koreksi
-        echo $a=3;
-        echo $b=7;
+var panjang = data.length;
+
+var low = 2;
+var high = 15;
+
+console.log(data);
+console.log(panjang);
+
+const minMax=function(min, max, arr, val=[]) {
+
+   
+// Mencari nilai Min dan Max
+    for(var i = 0; i <= panjang; i++){
+        
+        if(data[i] == low) {
+            min = data[i];
+        }else if(data[i] < low){
+            min = data[i+1];
+        }
+
+        for(var j = min; j < panjang; j++){
+            if(data[i] == high) {
+                
+                max = data[i];
+            }else if(data[i] < high){
+                max = data[i];
+            }
+        }
+    }
+
+
+// Menguraikan array berdasarkan nilai min dan max
+// dan minginputnya kedalam variabel val
+    for(h=0; h < panjang ; h++) {
+  
+        if(data[h] >= min && data[h] <= max) {
+
+            val.push(data[h]);
             
-        //Proses swap
-        $a=$a + $b;
-        $b=$a-$b;
-        $a= $a+$b;
+        }
+
         
-        //setelah swap
-        echo $a;
-        echo $b;
-        
-        
+    }
+
     
-?>
+    return val;
+ 
+}
+
+console.log(minMax(2,15,data));
+                                           
+</script>
+
+
 
 <p>
     #5. Buatlah fungsi sebagai berikut :
