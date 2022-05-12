@@ -192,7 +192,7 @@ $angka = 0;
 
 echo "hasil ". $angka. " adalah". terbilang(200);
 ?>
-
+       
 
 <p>#6 Apabila terdapat sebuah data : 
 array data =  [1,4,7,9,12], 
@@ -209,8 +209,8 @@ var panjang = data.length;
 var low = 2;
 var high = 15;
 
-console.log(data);
-console.log(panjang);
+// console.log(data);
+// console.log(panjang);
 
 const minMax=function(min, max, arr, val=[]) {
 
@@ -257,9 +257,72 @@ console.log(minMax(2,15,data));
                                            
 </script>
         
-        ================================================================
-        Lewat tanggal test
-        ================================================================
+        #7. Dari soal nomor 6, buatlah juga untuk menghasilkan output total ada berapa angka
+yg termasuk dari bagian low dan high
+array data = [1,4,7,9,12],
+int low = 2,
+int high = 15,
+maka akan menghasilkan output = 4
+        
+        
+         <script>
+            var data = [1,4,7,9,12,14];
+
+            var panjang = data.length;
+
+            var low = 2;
+            var high = 15;
+
+            // console.log(data);
+            // console.log(panjang);
+
+            const minMax=function(min, max, arr, val=[]) {
+
+
+            // Mencari nilai Min dan Max
+                for(var i = 0; i <= panjang; i++){
+
+                    if(data[i] == low) {
+                        min = data[i];
+                    }else if(data[i] < low){
+                        min = data[i+1];
+                    }
+
+                    for(var j = min; j < panjang; j++){
+                        if(data[i] == high) {
+
+                            max = data[i];
+                        }else if(data[i] < high){
+                            max = data[i];
+                        }
+                    }
+                }
+
+
+            // Menguraikan array berdasarkan nilai min dan max
+            // dan minginputnya kedalam variabel val
+                for(h=0; h < panjang ; h++) {
+
+                    if(data[h] >= min && data[h] <= max) {
+
+                        val.push(data[h]);
+
+                    }
+
+
+                }
+
+            //tambahan length untuk menghitung isi array
+                return val.length;
+
+            }
+
+            console.log(minMax(2,15,data));
+            
+        
+        </script>        
+
+        
         
       #8.
         Apabila terdapat int = 15, maka akan mencetak output berikut :
