@@ -132,7 +132,76 @@ console.log(placeValue(num));
     #4. Ketik kode untuk swap 2 integer variables tanpa VARIABLE TAMBAHAN 
 Contoh : let a = 3, let b = 7 => hasilnya a = 7, b = 3
 </p>
-<script>
+        <?php
+        
+        
+        // Koreksi
+        echo $a=3;
+        echo $b=7;
+            
+        //Proses swap
+        $a=$a + $b;
+        $b=$a-$b;
+        $a= $a+$b;
+        
+        //setelah swap
+        echo $a;
+        echo $b;
+        
+        
+        
+        ?>
+        
+
+
+
+
+<p>
+    #5. Buatlah fungsi sebagai berikut :
+int : 4, maka outputnya adalah : empat
+int : 20, maka outputnya adalah : dua puluh
+int : 39, maka outputnya adalah : tiga puluh sembilan
+int : 104, maka outputnya adalah : silahkan masukkan bilangan 1-100
+</p>
+
+<?php
+
+function terbilang ($angka) {
+    $angka = abs($angka);
+    $baca  = array('', 'satu', 'dua', 'tiga', 'empat', 'lima', 'enam', 'tujuh', 'delapan', 'sembilan', 'sepuluh', 'sebelas');
+    $terbilang = '';
+
+    if ($angka < 12) { // 0 - 11
+        $terbilang = ' ' . $baca[$angka];
+    } elseif ($angka < 20) { // 12 - 19
+        $terbilang = terbilang($angka -10) . ' belas';
+    } elseif ($angka < 100) { // 20 - 99
+        $terbilang = terbilang($angka / 10) . ' puluh' . terbilang($angka % 10);
+    } elseif ($angka < 104) { // 100 - 199
+        $terbilang = ' seratus' . terbilang($angka -100);
+    }else{
+        $terbilang = ' silahkan masukkan bilangan 1-100';
+
+
+    }
+
+    return $terbilang;
+}
+
+$angka = 0;
+
+echo "hasil ". $angka. " adalah". terbilang(200);
+?>
+
+
+<p>#6 Apabila terdapat sebuah data : 
+array data =  [1,4,7,9,12], 
+int low = 2,
+int high = 15,
+maka akan menghasilkan ouput [4,7,9,12]</p>
+
+
+ <script>
 var data = [1,4,7,9,12,14];
 
 var panjang = data.length;
@@ -187,99 +256,6 @@ const minMax=function(min, max, arr, val=[]) {
 console.log(minMax(2,15,data));
                                            
 </script>
-
-
-
-<p>
-    #5. Buatlah fungsi sebagai berikut :
-int : 4, maka outputnya adalah : empat
-int : 20, maka outputnya adalah : dua puluh
-int : 39, maka outputnya adalah : tiga puluh sembilan
-int : 104, maka outputnya adalah : silahkan masukkan bilangan 1-100
-</p>
-
-<?php
-
-function terbilang ($angka) {
-    $angka = abs($angka);
-    $baca  = array('', 'satu', 'dua', 'tiga', 'empat', 'lima', 'enam', 'tujuh', 'delapan', 'sembilan', 'sepuluh', 'sebelas');
-    $terbilang = '';
-
-    if ($angka < 12) { // 0 - 11
-        $terbilang = ' ' . $baca[$angka];
-    } elseif ($angka < 20) { // 12 - 19
-        $terbilang = terbilang($angka -10) . ' belas';
-    } elseif ($angka < 100) { // 20 - 99
-        $terbilang = terbilang($angka / 10) . ' puluh' . terbilang($angka % 10);
-    } elseif ($angka < 104) { // 100 - 199
-        $terbilang = ' seratus' . terbilang($angka -100);
-    }else{
-        $terbilang = ' silahkan masukkan bilangan 1-100';
-
-
-    }
-
-    return $terbilang;
-}
-
-$angka = 0;
-
-echo "hasil ". $angka. " adalah". terbilang(200);
-?>
-
-
-<p>#6 Apabila terdapat sebuah data : 
-array data =  [1,4,7,9,12], 
-int low = 2,
-int high = 15,
-maka akan menghasilkan ouput [4,7,9,12]</p>
-
-
- <h4>Mencari Nilai Max dan Min</h4>
-    <?php 
-      $nilaiArray = [1,4,7,9,12];
-      for($i = 1; $i <= count($nilaiArray); $i++){
-          // untuk hasil sisa bagi 2
-          if($i % 2 === 0) { 
-              echo ' '.$i ;
-              //untuk push nilai ke array kosong
-              array_push($nilaiArray, $i);  
-          }
-      };
-      echo "<br>";
-      $nilMax = 0;
-      $nilMin = 99999;
-
-      // melakukan perulangan pada array menggunakan foreach
-      foreach ($nilaiArray as $nilArr) {
-        if($nilArr > $nilMax) {
-            $nilMax = $nilArr;
-        }
-
-        if($nilArr < $nilMin) {
-            $nilMin = $nilArr;
-        }
-    }
-
-    echo 'nilai terbesar adalah '.$nilMax;
-    echo "<br>";
-    echo 'nilai terkecil adalah '.$nilMin;
-
-    $hasil=0;
-    for ($i=0; $i < $nilaiArray; $i++) { 
-        
-        if($nilaiArray == $nilMax || $nilaiArray == $nilMin)
-        {
-            return;
-        }else{
-            return $hasil= $hasil + $nilaiArray[$i];
-        }
-
-    }
-
-
-    echo $hasil;
-    ?>
         
         ================================================================
         Lewat tanggal test
